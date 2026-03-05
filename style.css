@@ -1,4 +1,4 @@
-/* --- ZMIENNE I RESET --- */
+
 :root {
     --primary: #0ea5e9;
     --primary-dark: #0284c7;
@@ -59,7 +59,6 @@ body {
     border-radius: 2px;
 }
 
-/* --- NAWIGACJA --- */
 header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -105,7 +104,6 @@ header {
     color: var(--primary);
 }
 
-/* --- HERO SECTION --- */
 #hero {
     min-height: 100vh;
     display: flex;
@@ -179,7 +177,6 @@ header {
     color: white;
 }
 
-/* --- O MNIE --- */
 .about-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -231,7 +228,6 @@ header {
     font-size: 0.9rem;
 }
 
-/* --- UMIEJĘTNOŚCI --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -290,7 +286,6 @@ header {
     font-weight: bold;
 }
 
-/* --- PROJEKTY --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -377,7 +372,6 @@ header {
     color: var(--primary);
 }
 
-/* --- FOOTER / KONTAKT --- */
 .footer {
     background: var(--dark);
     color: white;
@@ -432,7 +426,6 @@ header {
     margin-bottom: 0 !important;
 }
 
-/* --- ANIMACJE --- */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -444,8 +437,6 @@ header {
     transform: translateY(0);
 }
 
-/* --- MEDIA QUERIES --- */
-/* Стили для кнопки гамбургера (скрыта на компьютерах) */
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
@@ -455,12 +446,10 @@ header {
 }
 
 @media (max-width: 768px) {
-    /* Показываем гамбургер */
     .menu-toggle {
         display: block;
     }
 
-    /* Настройка выезжающего меню */
     .nav-links {
         position: fixed;
         top: 0;
@@ -476,7 +465,6 @@ header {
         gap: 40px;
     }
 
-    /* Класс, который будет добавляться через JS для показа меню */
     .nav-links.active {
         right: 0;
     }
@@ -485,7 +473,6 @@ header {
         font-size: 1.5rem;
     }
 
-    /* Корректировка шрифтов и отступов для телефонов */
     .hero-content h1 { 
         font-size: 2.8rem; 
     }
@@ -513,12 +500,10 @@ header {
         font-size: 1.8rem;
     }
 
-    /* Сетка проектов и навыков в одну колонку */
     .projects-grid, .about-grid, .skills-grid { 
         grid-template-columns: 1fr; 
     }
 
-    /* Центрирование контактов в подвале */
     .contact-info { 
         flex-direction: column; 
         gap: 20px; 
