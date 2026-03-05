@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Cień pod nawigacją przy scrollowaniu
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 10) {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Płynne pojawianie się elementów (Intersection Observer)
     const observerOptions = {
         root: null,
         rootMargin: '0px',
@@ -28,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const fadeElements = document.querySelectorAll('.fade-in');
     fadeElements.forEach(el => observer.observe(el));
 
-    // 3. Obsługa menu mobilnego (Hamburger)
     const mobileMenuBtn = document.getElementById('mobile-menu');
     const navLinks = document.querySelector('.nav-links');
 
@@ -36,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             
-            // Zmiana ikony z hamburgera na krzyżyk
             const icon = mobileMenuBtn.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -48,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Zamknięcie menu po kliknięciu w link na telefonie
     const links = document.querySelectorAll('.nav-links a');
     links.forEach(link => {
         link.addEventListener('click', () => {
